@@ -3,7 +3,7 @@
   publish = "build"
 
 [build.environment]
-  NODE_VERSION = "18.x"
+  NODE_VERSION = "18.19.1"
 
 # Przekierowania dla Single Page Application
 [[redirects]]
