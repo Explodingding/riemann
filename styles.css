@@ -1,17 +1,35 @@
-.App {
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+:root {
+  --ink: #18322f;
+  --muted: #46605d;
+  --panel: rgba(255, 255, 255, 0.92);
+  --line: rgba(24, 50, 47, 0.11);
+  --green: #1f6f63;
+  --green-dark: #143a35;
+  --teal: #2a9d8f;
+  --sand: #e9c46a;
+  --soft: #f2f8f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
   background:
     radial-gradient(circle at top left, rgba(42, 157, 143, 0.18), transparent 32rem),
     linear-gradient(180deg, #eef6f1 0%, #f8faf9 42%, #ffffff 100%);
-  color: #18322f;
+  color: var(--ink);
+  font-family: "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
 }
 
-main {
-  flex-grow: 1;
-  width: 100%;
+button,
+select {
+  font: inherit;
 }
 
 .research-page {
@@ -24,23 +42,24 @@ main {
 .section-card,
 .research-question-panel,
 .insight-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(24, 50, 47, 0.1);
+  background: var(--panel);
+  border: 1px solid var(--line);
   box-shadow: 0 24px 60px rgba(24, 50, 47, 0.12);
 }
 
 .hero-panel {
+  position: relative;
+  overflow: hidden;
   border-radius: 28px;
   padding: clamp(2rem, 5vw, 4.5rem);
   margin-bottom: 1.5rem;
-  overflow: hidden;
-  position: relative;
 }
 
 .hero-panel::after {
-  content: '';
+  content: "";
   position: absolute;
-  inset: auto -6rem -7rem auto;
+  right: -6rem;
+  bottom: -7rem;
   width: 22rem;
   height: 22rem;
   border-radius: 999px;
@@ -50,11 +69,11 @@ main {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #2a9d8f;
+  color: var(--teal);
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.78rem;
 }
 
 .hero-panel h1 {
@@ -94,15 +113,25 @@ main {
 }
 
 .hero-actions button {
+  position: relative;
+  z-index: 1;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .hero-actions button:hover,
 .hero-actions button.active {
-  background: #1f6f63;
+  background: var(--green);
   color: #ffffff;
   transform: translateY(-1px);
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
 }
 
 .insight-grid {
@@ -127,7 +156,7 @@ main {
   width: fit-content;
   border-radius: 999px;
   background: #e7f4ef;
-  color: #1f6f63;
+  color: var(--green);
   font-size: 0.78rem;
   font-weight: 800;
   padding: 0.35rem 0.65rem;
@@ -148,7 +177,7 @@ main {
 .evidence-card p,
 .comparison-row,
 .data-list {
-  color: #46605d;
+  color: var(--muted);
   line-height: 1.65;
 }
 
@@ -158,7 +187,7 @@ main {
   gap: 2rem;
   align-items: center;
   margin-bottom: 1.5rem;
-  background: #143a35;
+  background: var(--green-dark);
 }
 
 .research-question-panel .eyebrow,
@@ -239,7 +268,7 @@ main {
 }
 
 .metric {
-  border-left: 4px solid #e9c46a;
+  border-left: 4px solid var(--sand);
   background: #fff8e6;
   color: #5f4917 !important;
   margin: 0.75rem 0;
@@ -248,7 +277,7 @@ main {
 }
 
 .implication {
-  background: #f2f8f5;
+  background: var(--soft);
   border-radius: 16px;
   padding: 0.9rem;
   margin: 1rem 0;
@@ -330,10 +359,11 @@ main {
 
 .data-list li {
   padding-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  color: #46605d;
+  color: var(--muted);
   text-align: center;
   padding: 1rem;
   border-top: 1px solid rgba(24, 50, 47, 0.08);
@@ -376,8 +406,8 @@ footer {
   .data-list,
   .research-question-panel,
   .section-heading {
-    grid-template-columns: 1fr;
     display: grid;
+    grid-template-columns: 1fr;
   }
 
   .filter-bar {

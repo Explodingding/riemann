@@ -1,6 +1,6 @@
 # Lommel and Uganda Sustainable Resource Research Hub
 
-Interactive research page for comparing Lommel, Belgium's silica-sand resource management model with Uganda's emerging silica-sand and Lake Victoria environmental-protection challenges.
+Dependency-free static research page for comparing Lommel, Belgium's silica-sand resource management model with Uganda's emerging silica-sand and Lake Victoria environmental-protection challenges.
 
 ## Features
 
@@ -10,56 +10,35 @@ Interactive research page for comparing Lommel, Belgium's silica-sand resource m
 - Uganda-focused roadmap and data-collection checklist
 - Source trail for the uploaded report and external references
 
-## Technologies
+## Technology
 
-- React 19
-- TypeScript
-- CSS
+- Plain HTML
+- Plain CSS
+- Plain JavaScript
+
+No Node, React, bundler, install step or Netlify deployment is required.
 
 ## Getting started
 
-### Install dependencies
+Open `index.html` directly in a browser, or serve the folder with any static web server.
 
 ```bash
-npm install
+python3 -m http.server 8000
 ```
 
-### Run the app locally
+Then open [http://localhost:8000](http://localhost:8000).
 
-```bash
-npm start
-```
+## GitHub Pages
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This repository includes a GitHub Actions workflow at `.github/workflows/pages.yml`.
+After the branch is merged into `master`, GitHub can publish the static site directly to GitHub Pages.
 
-### Build for production
+If Pages is not already enabled for the repository:
 
-```bash
-npm run build
-```
-
-This creates a production build in the `build` folder.
-
-## Deployment on Netlify
-
-The project can be deployed on Netlify:
-
-1. Connect the repository to Netlify
-2. Let Netlify detect the build configuration
-3. Deploy the generated production build
-
-You can also deploy manually with the Netlify CLI:
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Authenticate
-netlify login
-
-# Deploy
-netlify deploy --prod
-```
+1. Go to the repository on GitHub.
+2. Open `Settings` -> `Pages`.
+3. Set the build and deployment source to `GitHub Actions`.
+4. Run the `Deploy static site to GitHub Pages` workflow, or push to `master`.
 
 ## License
 

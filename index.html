@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A static research page comparing sustainable silica resource management in Lommel, Belgium and Uganda."
+    >
+    <title>Lommel and Uganda Sustainable Resource Research Hub</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="research-page">
+      <section class="hero-panel" id="overview">
+        <p class="eyebrow">Environmental protection research hub</p>
+        <h1>Lommel vs Uganda: Sustainable Resource Management</h1>
+        <p class="hero-copy">
+          A data-collection page for comparing how Lommel, Belgium manages high-purity silica extraction,
+          ecological reclamation and renewable power with how Uganda could control silica sand resources
+          around Lake Victoria without repeating preventable environmental damage.
+        </p>
+        <nav class="hero-actions" aria-label="Research sections">
+          <button class="active" data-section="overview" type="button">Overview</button>
+          <button data-section="evidence" type="button">Evidence bank</button>
+          <button data-section="comparison" type="button">Comparison</button>
+          <button data-section="roadmap" type="button">Uganda roadmap</button>
+          <button data-section="sources" type="button">Sources</button>
+        </nav>
+      </section>
+
+      <section class="content-section active" data-content-section="overview">
+        <div class="insight-grid" aria-label="Research summary">
+          <article class="insight-card">
+            <span>Core question</span>
+            <h2>Can Uganda copy the useful parts of the Lommel model?</h2>
+            <p>
+              Yes, but only if the model is adapted: deposit testing, wetland protection, enforceable
+              reclamation, local manufacturing and transparent monitoring must come before rapid extraction.
+            </p>
+          </article>
+          <article class="insight-card">
+            <span>Lommel lesson</span>
+            <h2>Extraction is managed as an industrial ecosystem</h2>
+            <p>
+              Lommel links processed silica, customer logistics, renewable energy, water recirculation and
+              post-mining nature planning into one long-term system.
+            </p>
+          </article>
+          <article class="insight-card">
+            <span>Uganda risk</span>
+            <h2>Lake Victoria changes the environmental stakes</h2>
+            <p>
+              Sand mining near wetlands and shorelines can affect erosion, fish habitat, water quality and
+              local livelihoods, especially where informal extraction outpaces enforcement.
+            </p>
+          </article>
+          <article class="insight-card">
+            <span>Research output</span>
+            <h2>A living dataset, not a one-time essay</h2>
+            <p>
+              The page organizes evidence into metrics, source links, data gaps and policy actions so the
+              project can grow into a fieldwork or dissertation-style study.
+            </p>
+          </article>
+        </div>
+
+        <section class="research-question-panel">
+          <div>
+            <p class="eyebrow">Working thesis</p>
+            <h2>Resource control should mean more than stopping illegal mining.</h2>
+          </div>
+          <p>
+            A strong system controls what is extracted, who benefits, how water and biodiversity are protected,
+            where value is added, how much financial assurance is posted, and what the land becomes after mining.
+          </p>
+        </section>
+      </section>
+
+      <section class="content-section" data-content-section="evidence">
+        <div class="section-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Evidence bank</p>
+              <h2>Collect and filter research findings</h2>
+            </div>
+            <p>
+              Use these cards as a starting dataset. Add field measurements, interviews and official permit
+              records as they become available.
+            </p>
+          </div>
+
+          <div class="filter-bar">
+            <label>
+              Region
+              <select id="region-filter">
+                <option value="All">All regions</option>
+              </select>
+            </label>
+            <label>
+              Theme
+              <select id="theme-filter">
+                <option value="All">All themes</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="evidence-grid" id="evidence-grid"></div>
+        </div>
+      </section>
+
+      <section class="content-section" data-content-section="comparison">
+        <div class="section-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Side-by-side analysis</p>
+              <h2>What Lommel proves, and what Uganda still needs</h2>
+            </div>
+          </div>
+          <div class="comparison-table" id="comparison-table" role="table" aria-label="Lommel and Uganda comparison"></div>
+        </div>
+      </section>
+
+      <section class="content-section" data-content-section="roadmap">
+        <div class="section-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Action framework</p>
+              <h2>Roadmap for a Uganda-focused research proposal</h2>
+            </div>
+          </div>
+          <div class="roadmap" id="roadmap-list"></div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Data gaps</p>
+              <h2>What to collect next</h2>
+            </div>
+            <p>
+              These missing datasets can become interview questions, fieldwork checklists or spreadsheet columns.
+            </p>
+          </div>
+          <ul class="data-list" id="data-list"></ul>
+        </div>
+      </section>
+
+      <section class="content-section" data-content-section="sources">
+        <div class="section-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Source trail</p>
+              <h2>Research sources used on this page</h2>
+            </div>
+          </div>
+          <div class="sources-list" id="sources-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lommel and Uganda Sustainable Resource Research Hub - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
