@@ -1,68 +1,45 @@
-# Hipoteza Riemanna - Aplikacja Edukacyjna
+# Lommel and Uganda Sustainable Resource Research Hub
 
-Interaktywna aplikacja edukacyjna poświęcona hipotezie Riemanna, jednego z najważniejszych nierozwiązanych problemów matematycznych.
+Dependency-free static research page for comparing Lommel, Belgium's silica-sand resource management model with Uganda's emerging silica-sand and Lake Victoria environmental-protection challenges.
 
-## Funkcjonalności
+## Features
 
-- Wprowadzenie do hipotezy Riemanna
-- Wyjaśnienie liczb zespolonych i funkcji Zeta
-- Interaktywne wizualizacje
-- Szczegółowe omówienie znaczenia i zastosowań hipotezy
-- Pełny słownik pojęć matematycznych z eleganckim formatowaniem wzorów
+- Research overview for the Lommel-to-Uganda comparison
+- Filterable evidence bank with source links, metrics, findings and implications
+- Side-by-side comparison table across resource quality, value chain, environment, energy and governance
+- Uganda-focused roadmap and data-collection checklist
+- Source trail for the uploaded report and external references
 
-## Technologie
+## Technology
 
-- React 19
-- TypeScript
-- MathJax do renderowania wzorów matematycznych
-- Plotly.js do wizualizacji
-- CSS do stylizacji
+- Plain HTML
+- Plain CSS
+- Plain JavaScript
 
-## Rozpoczęcie pracy z projektem
+No Node, React, bundler, install step or Netlify deployment is required.
 
-### Instalacja zależności
+## Getting started
 
-```bash
-npm install
-```
-
-### Uruchomienie aplikacji w trybie deweloperskim
+Open `index.html` directly in a browser, or serve the folder with any static web server.
 
 ```bash
-npm start
+python3 -m http.server 8000
 ```
 
-Otwórz [http://localhost:3000](http://localhost:3000), aby zobaczyć aplikację w przeglądarce.
+Then open [http://localhost:8000](http://localhost:8000).
 
-### Budowanie wersji produkcyjnej
+## GitHub Pages
 
-```bash
-npm run build
-```
+This repository includes a GitHub Actions workflow at `.github/workflows/pages.yml`.
+After the branch is merged into `master`, GitHub can publish the static site directly to GitHub Pages.
 
-Tworzy wersję produkcyjną aplikacji w folderze `build`, gotową do deploymentu.
+If Pages is not already enabled for the repository:
 
-## Deployment na Netlify
+1. Go to the repository on GitHub.
+2. Open `Settings` -> `Pages`.
+3. Set the build and deployment source to `GitHub Actions`.
+4. Run the `Deploy static site to GitHub Pages` workflow, or push to `master`.
 
-Projekt jest skonfigurowany do łatwego deploymentu na Netlify:
+## License
 
-1. Połącz repozytorium z Netlify
-2. Konfiguracja buildowania zostanie automatycznie wykryta z pliku `netlify.toml`
-3. Netlify automatycznie zbuduje i zdeployuje aplikację
-
-Możesz również wykonać deployment ręcznie, używając Netlify CLI:
-
-```bash
-# Instalacja Netlify CLI
-npm install -g netlify-cli
-
-# Autoryzacja
-netlify login
-
-# Deployment
-netlify deploy --prod
-```
-
-## Licencja
-
-Ten projekt jest udostępniany na licencji MIT. Szczegóły można znaleźć w pliku LICENSE.
+This project is available under the MIT license. See `LICENSE` for details.
