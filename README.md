@@ -1,68 +1,66 @@
-# Hipoteza Riemanna - Aplikacja Edukacyjna
+# Lommel and Uganda Sustainable Resource Research Hub
 
-Interaktywna aplikacja edukacyjna poświęcona hipotezie Riemanna, jednego z najważniejszych nierozwiązanych problemów matematycznych.
+Interactive research page for comparing Lommel, Belgium's silica-sand resource management model with Uganda's emerging silica-sand and Lake Victoria environmental-protection challenges.
 
-## Funkcjonalności
+## Features
 
-- Wprowadzenie do hipotezy Riemanna
-- Wyjaśnienie liczb zespolonych i funkcji Zeta
-- Interaktywne wizualizacje
-- Szczegółowe omówienie znaczenia i zastosowań hipotezy
-- Pełny słownik pojęć matematycznych z eleganckim formatowaniem wzorów
+- Research overview for the Lommel-to-Uganda comparison
+- Filterable evidence bank with source links, metrics, findings and implications
+- Side-by-side comparison table across resource quality, value chain, environment, energy and governance
+- Uganda-focused roadmap and data-collection checklist
+- Source trail for the uploaded report and external references
 
-## Technologie
+## Technologies
 
 - React 19
 - TypeScript
-- MathJax do renderowania wzorów matematycznych
-- Plotly.js do wizualizacji
-- CSS do stylizacji
+- CSS
 
-## Rozpoczęcie pracy z projektem
+## Getting started
 
-### Instalacja zależności
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### Uruchomienie aplikacji w trybie deweloperskim
+### Run the app locally
 
 ```bash
 npm start
 ```
 
-Otwórz [http://localhost:3000](http://localhost:3000), aby zobaczyć aplikację w przeglądarce.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Budowanie wersji produkcyjnej
+### Build for production
 
 ```bash
 npm run build
 ```
 
-Tworzy wersję produkcyjną aplikacji w folderze `build`, gotową do deploymentu.
+This creates a production build in the `build` folder.
 
-## Deployment na Netlify
+## Deployment on Netlify
 
-Projekt jest skonfigurowany do łatwego deploymentu na Netlify:
+The project can be deployed on Netlify:
 
-1. Połącz repozytorium z Netlify
-2. Konfiguracja buildowania zostanie automatycznie wykryta z pliku `netlify.toml`
-3. Netlify automatycznie zbuduje i zdeployuje aplikację
+1. Connect the repository to Netlify
+2. Let Netlify detect the build configuration
+3. Deploy the generated production build
 
-Możesz również wykonać deployment ręcznie, używając Netlify CLI:
+You can also deploy manually with the Netlify CLI:
 
 ```bash
-# Instalacja Netlify CLI
+# Install Netlify CLI
 npm install -g netlify-cli
 
-# Autoryzacja
+# Authenticate
 netlify login
 
-# Deployment
+# Deploy
 netlify deploy --prod
 ```
 
-## Licencja
+## License
 
-Ten projekt jest udostępniany na licencji MIT. Szczegóły można znaleźć w pliku LICENSE.
+This project is available under the MIT license. See `LICENSE` for details.
